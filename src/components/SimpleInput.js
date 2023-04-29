@@ -10,7 +10,7 @@ const SimpleInput = (props) => {
   // Email States
   const [enteredEmail, setenteredEmail] = useState("");
   const [enteredEmailTouched, setEnteredEmailTouched] = useState(false);
-  const enteredEmailIsValid = enteredEmail.includes("@");
+  const enteredEmailIsValid = validateEmail(enteredEmail);
   const emailInputIsInValid = !enteredEmailIsValid && enteredEmailTouched;
 
   let formIsValid = false;
@@ -101,5 +101,12 @@ const SimpleInput = (props) => {
     </form>
   );
 };
+
+function validateEmail(mail) {
+  if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail)) {
+    return true;
+  }
+  return false;
+}
 
 export default SimpleInput;
