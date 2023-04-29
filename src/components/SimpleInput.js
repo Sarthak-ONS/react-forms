@@ -1,5 +1,7 @@
 import { useState } from "react";
+
 import useInput from "../hooks/use-input";
+import validateEmail from "../ValidationHelpers/email-validate-helper";
 
 const SimpleInput = (props) => {
   const {
@@ -17,7 +19,7 @@ const SimpleInput = (props) => {
     hasError: emailInputHasError,
     valueChangeHandler: emailChangeHandler,
     inputBlurHandler: emailBlurHandler,
-    resetEmailInput,
+    reset: resetEmailInput,
   } = useInput(validateEmail);
 
   let formIsValid = false;
@@ -28,15 +30,8 @@ const SimpleInput = (props) => {
 
   const formSubmitHandler = (event) => {
     event.preventDefault();
-
-    if (!enteredNameIsValid) {
-      return;
-    }
-
-    if (!enteredEmailIsValid) {
-      return;
-    }
     console.log(enteredName);
+    console.log(enteredEmail);
     resetNameInput();
     resetEmailInput();
   };
@@ -87,12 +82,3 @@ const SimpleInput = (props) => {
     </form>
   );
 };
-
-function validateEmail(mail) {
-  if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail)) {
-    return true;
-  }
-  return false;
-}
-
-export default SimpleInput;
