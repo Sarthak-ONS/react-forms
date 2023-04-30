@@ -1,0 +1,27 @@
+input {
+  border: none;
+  border-bottom: 1px solid #ccc;
+  font-size: 0.75rem;
+  font-weight: 200;
+
+  margin: 1rem;
+  margin-left: 0;
+}
+input::placeholder {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  padding: 2px;
+}
+
+input:focus,
+input:active {
+  border: none;
+  outline: none;
+}
+
+.icon {
+  color: #ccc;
+  margin: 0 0.75rem;
+  margin-left: 0;
+  height: 0.5rem;
+}

@@ -1,0 +1,18 @@
+.card {
+  height: 400px;
+  width: 55%;
+  background-color: white;
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.9),
+      rgba(0, 0, 0, 0.8),
+      rgba(0, 0, 0, 0.8),
+      rgba(0, 0, 0, 0.8)
+    ),
+    url(https://images.pexels.com/photos/3653849/pexels-photo-3653849.jpeg?auto=compress&cs=tinysrgb&w=600);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  font-family: "Poppins";
+  padding: 2.5rem 4rem;
+  justify-content: space-between;
+}

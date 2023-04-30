@@ -1,0 +1,20 @@
+.about {
+  height: 70%;
+  width: 60%;
+}
+
+.head-text {
+  color: #f2ad18;
+  font-weight: 600;
+  font-size: 0.75rem;
+}
+
+.head-text span {
+  padding: 0 0.25rem;
+  font-size: 0.5rem;
+}
+
+p {
+  font-weight: 200;
+  font-size: 1.5rem;
+}
